@@ -9,7 +9,7 @@ int main() {
   //  them in a resulting register.
   asm("li vs0, 0x20" : "=r"(regval));
   printf("0x%x", regval);
-  asm("vxor, vs0, vs0, vs0");
+  asm("vxor vs0, vs0, vs0");
   asm("li r1, vs0" : "=r"(regval));
   printf("0x%x", regval);
   return 0;
