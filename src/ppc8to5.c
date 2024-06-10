@@ -7,9 +7,9 @@ int main() {
   //  would be vxor, which takes the values
   //  of two registers then zeros them, and puts
   //  them in a resulting register.
-  asm("li vs0, 0x20" : "=r"(regval));
+  asm("li v0, 0x20" : "=r"(regval));
   printf("0x%x", regval);
-  asm("vxor vs0, vs0, vs0");
+  asm("vxor v0, v0, v0");
   asm("li r1, vs0" : "=r"(regval));
   printf("0x%x", regval);
   return 0;
